@@ -14,12 +14,14 @@ closesymbol.addEventListener("click",function(){
 
 // Cart
 let cartsymbol   = document.getElementById("cartsymbol")
-let shopingcartt = document.getElementById("shopingcartt")
+let shoppingcart = document.getElementById("shoppingcart")
 let closecart    = document.getElementById("closecart")
 cartsymbol.addEventListener("click",function(){
-  shopingcartt.style.display = "block"
+  shoppingcart.style.display = "block"
 })
 
 closecart.addEventListener("click",function(){
-  shopingcartt.style.display = "none"
+  shoppingcart.style.display = "none"
 })
+
+

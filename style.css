@@ -14,7 +14,8 @@ body{
   margin: 0;
 }
 
-.shopingcart{
+/* Shopping Cart */
+.shoppingcart{
   content: '';
   position: absolute;
   right: 0;
@@ -29,35 +30,41 @@ body{
   transition: 0.5s all;
 }
 
-.shopingcart:hover{
+.shoppingcart:hover{
   background-color: white;
 }
 
-.shopingcart p{
+.shoppingcart p{
   color: var(--main-color-small);
   font-size: 15px;
   margin-left: 10px;
 }
 
+.empty_cart{
+  text-align: center;
+  margin-top: 400px;
+  transform: translate(-50% -50%);
+}
 
-.shopingcart_btn{
+.shoppingcart_btn{
   position: absolute;
   bottom:20;
   left: 5%;
+  width: 100%;
 }
 
-.shopingcart_btn a{
+.shoppingcart_btn button{
+  cursor: pointer;
+  border: 0;
   font-size: 14px;
   color: white;
   background-color: black;
-  padding-top: 15px;
-  padding-right: 115px;
-  padding-bottom: 15px;
-  padding-left: 115px;
+  width: 90%;
+  height: 50px;
   transition: 0.3s all;
 }
 
-.shopingcart_btn a:hover{
+.shoppingcart_btn a:hover{
   color: darkgray;
 }
 
@@ -791,6 +798,12 @@ height: 100%;
 
 /* Mobile */
 @media (min-width:300px) and (max-width:545px){
+  /* Shopping Cart */
+.shoppingcart{
+  width: 100%;
+}
+
+
   .navbar{
     width: var(--main-width);
     height: 70px;
@@ -1098,7 +1111,14 @@ height: 100%;
 
 /* Small Screens */
 @media (min-width:546px) and (max-width:920px){
+  /* Shopping Cart */
+  .shoppingcart{
+    width: 80%;
+  }
 
+
+
+  /* Nav Bar */
   .navbar{
     width: var(--main-width);
     height: 70px;
@@ -1273,6 +1293,11 @@ left: 0;
 
 /* Medium Screens */
 @media (min-width:921px) and (max-width:1199px){
+    /* Shopping Cart */
+    .shoppingcart{
+      width: 80%;
+    }
+
   .navbar{
     width: var(--main-width);
     height: 70px;
@@ -1349,6 +1374,11 @@ left: 0;
 
 /* Large Screens */
 @media (min-width:1200px){
+    /* Shopping Cart */
+    .shoppingcart{
+      width: 30%;
+    }
+    
   .navbar{
     width: var(--main-width);
     height: 70px;
