@@ -20,7 +20,7 @@ body{
   right: 0;
   top: 0;
   width: 20%;
-  height: 16.5%;
+  height: 16.52%;
   background-color: #faedeb;
   box-shadow: 5px 5px 200px black;
   z-index: 100;
@@ -89,10 +89,9 @@ body{
 
 .closesymbol{
   position: absolute;
-  top: 0;
+  top: 10;
   right: 0;
   width: 5%;
-  padding: 10px;
   background-color: white;
   cursor: pointer;
 }
