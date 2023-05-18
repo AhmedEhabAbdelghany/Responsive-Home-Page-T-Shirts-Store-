@@ -44,6 +44,7 @@ body{
   text-align: center;
   margin-top: 400px;
   transform: translate(-50% -50%);
+  overflow:hidden;
 }
 
 .shoppingcart_btn{
@@ -322,45 +323,96 @@ body{
   height: 80%;
   position: relative;
   overflow: hidden;
+  transition: all 0.7s ease-in-out;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
 }
 
-.product_card_image img{
-  width: 100%;
-  height: 100%;
+
+/* Main Back Ground */
+.product_card_image1{
+  background-image: url(images/product1.jpg);
 }
 
-.product_card_hover_image1{
+.product_card_image2{
+  background-image: url(images/product2.jpg);
+}
+
+.product_card_image3{
+  background-image: url(images/product3.jpg);
+}
+
+
+.product_card_image4{
+  background-image: url(images/product4.jpg);
+}
+
+/* Hover To Change Background */
+.product_card_image1:hover {
   background-image: url("images/product1_tshirt.jpg");
-}
-.product_card_hover_image2{
+} 
+
+.product_card_image2:hover{
   background-image: url("images/product2_tshirt.jpg");
 }
-.product_card_hover_image3{
-  background-image: url("images/product1_tshirt.jpg");
+.product_card_image3:hover{
+  background-image: url("images/product2_tshirt.jpg");
 }
-.product_card_hover_image4{
+.product_card_image4:hover{
   background-image: url("images/product4_tshirt.jpg");
 }
 
-.product_card_hover{
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
-  position: absolute;
-  top: 0;
-  left: -450;
-  width: 100%;
-  height: 100%;
-  opacity: 60%;
-  transition: 0.8s all;
-}
+/* Hover To Display Icons */
+.product_card_image:hover .product_card_hover_icon{
+  display: block;
+} 
+
 
 .product_card_hover_icon{
-  width: 20px;
+  width: 5px;
   height: 20px;
   float: right;
-  margin-right: 18px;
+  margin-right: 30px;
+  display: none;
   position: relative;
+}
+
+.product_card_iconcart::after{
+  content: "Select Options";
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  display: none;
+  font-size: 12px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  width: 80px;
+  padding: 10px 10px;
+  text-align: center;
+  
+}
+
+
+.product_card_iconeye::after{
+  content: "Quick View";
+  position: absolute;
+  right: 10px;
+  top: 78px;
+  display: none;
+  font-size: 12px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  width: 80px;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.product_card_iconcart:hover::after,
+.product_card_iconeye:hover::after{
+  display: block;
 }
 
 /* .product_card_hover_icon p{
@@ -377,21 +429,20 @@ body{
 } */
 
 .product_card_hover_icon img{
+  width: 20px;
+  height: 20px;
   background-color: white;
   box-shadow: 0px 1px 10px black;
   padding: 5px;
   border-radius: 50px;
   margin-bottom: 10px;
   margin-top: 20px;
+  /* opacity: 0; */
+
 }
 
 .product_card_hover_icon :hover img{
   background-color: lightgray;
-}
-
-.product_card_image:hover .product_card_hover{
-  left: 0;
-  opacity: 100%;
 }
 
 
@@ -599,6 +650,54 @@ height: 100%;
 
 
 /* SUMMER COLLECTION On Sale T-Shirts AND Popular T-Shirts same css */
+/* Main Back Ground */
+.product_card_image_sale1{
+  background-image: url(images/product-01-a.jpg);
+}
+
+.product_card_image_sale2{
+  background-image: url(images/product-05-a-300x366.jpg);
+}
+
+.product_card_image_sale3{
+  background-image: url(images/product-03-a-300x366.jpg);
+}
+
+
+.product_card_image_sale4{
+  background-image: url(images/product4.jpg);
+}
+
+/* Hover To Change Background */
+.product_card_image_sale1:hover {
+  background-image: url("images/product4_tshirt.jpg");
+} 
+
+.product_card_image_sale2:hover{
+  background-image: url("images/product4_tshirt.jpg");
+}
+.product_card_image_sale3:hover{
+  background-image: url("images/product2_tshirt.jpg");
+}
+.product_card_image_sale4:hover{
+  background-image: url("images/product4_tshirt.jpg");
+}
+
+
+
+
+
+
+
+
+/* Hover To Display Icons */
+.product_card_image:hover .product_card_hover_icon{
+  display: block;
+} 
+
+
+
+
 
 
 /* Reviews */
@@ -1012,6 +1111,9 @@ height: 100%;
   font-size: 13px;
 }
 
+
+
+/* Sale */
 
 /* Reviews */
 
